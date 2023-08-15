@@ -1,11 +1,12 @@
 <h1><%= @task.title  %></h1>
+<p><%= link_to 'edit existing task', edit_task_path(@task) %></p>
 <br>
 <div class="alert alert-primary" role="alert">
    <%= @task.details %>
 </div>
 <br>
 <input type="checkbox">
-<% if @task.complete = true %>
+<% if @task.completed == 1 %>
 This task is complete
 <% else %>
 This task is not complete
